@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ScheduleApp</title>
+    <title><%= page_title(yield(:title)) %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,9 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="main">
+      <h1><%= link_to "スケジュールアプリ", root_path %></h1>
+      <%= yield %>
+    </div>
   </body>
 </html>

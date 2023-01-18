@@ -1,0 +1,146 @@
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+  }
+p {
+    margin: 0;
+}
+h1 {
+    border-bottom: 1px dashed #888;
+    padding: 20px 8px;
+    font-size: 32px;
+    font-weight: normal;
+}
+h1 a {
+    text-decoration: none;
+    color: #222;
+}
+h2 {
+    font-size: 20px;
+}
+.schedule-id {
+    font-size: 9px;
+    color: #aaa;
+    padding: 2px 0;
+}
+.schedule-title {
+    font-size: 16px;
+    line-height: 21px;
+    margin: 6px 0 10px;
+}
+.schedule-title a {
+    text-decoration: underline;
+    color: #333;
+}
+.schedule-date {
+    font-size: 12px;
+    margin: 4px 0 0;
+}
+.schedule-is-allday {
+    background-color: #ddd;
+    width: 45px;
+    border-radius: 4px;
+    display: block;
+    padding: 2px 4px;
+    color: #444;
+    font-size: 8px;
+    margin-bottom: 6px;
+}
+.schedule-memo {
+    margin: 6px 0;
+    font-size: 12px;
+}
+.main {
+    margin: 0 auto;
+    width: 800px;
+}
+.flash {
+    background-color: #dd2222;
+    color: #eee;
+    margin-bottom: 18px;
+    padding: 10px 14px;
+    width: 320px;
+}
+.card-wrapper {
+    display:flex;
+    flex-wrap: wrap;
+}
+.card {
+    display: flex;
+    width: 250px;
+    flex-direction: column;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    padding: 8px 18px 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+.schedule-meta {
+    border-top: 1px solid #ddd;
+    font-size: 9px;
+    margin-top: auto;
+    padding-top: 20px;
+}
+.schedule-delete {
+    float: right;
+}
+.schedule-delete a {
+    color: #dd2222;
+}
+form {
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+.form-wrapper {
+    width: 400px;
+    margin: 0;
+}
+.form-date {
+    display: flex;
+    justify-content: space-between;
+}
+.form-date label {
+    display: block;
+}
+input[type="date"] {
+    padding: 0 10px;
+    height: 36px;
+    border: 0;
+    background: transparent;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #999;
+    background: #ddd;
+  }
+input[type="text"], textarea, input[type="submit"] {
+    float: left;
+    font-size: 16px;
+    width: 100%;
+    border: none;
+    margin: 3px 0 6px;
+    padding: 5px 6px;
+    border-radius: 0.3px;
+    background: #ddd;
+    color: #666;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+.form-is-allday {
+    padding: 18px 2px 12px;
+}
+
+.footer {
+    font-size: 12px;
+    color: #444;
+}
+.link-schedule {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 4px;
+    font-size: 12px;
+    color: #333;
+    border: 1px solid #888;
+    border-radius: 2px;
+}

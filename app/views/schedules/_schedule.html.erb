@@ -1,0 +1,34 @@
+<div class="card">
+  <p class="schedule-id">
+    <% if defined? with_id %>
+      ID: <%= schedule.id %>
+    <% end %>
+  </p>
+  <p class="schedule-date">
+    <%= schedule.start_date.strftime("%Y/%m/%d") %> 〜 <%= schedule.end_date.strftime("%Y/%m/%d") %>
+  </p>
+  <p class="schedule-title">
+  <% if defined? with_title_link %>
+    <%= link_to schedule.title, schedule %>
+  <% else %>
+    <%= schedule.title %>
+  <% end %>
+  </p>
+
+  <p class="schedule-is-allday">
+    終日: <%= "◯" if schedule.is_allday %>
+  </p>
+  <p class="schedule-memo">
+    <%= schedule.memo %>
+  </p>
+  <div class="schedule-meta">
+    <span class="schedule-update">
+      <% if defined? with_update_date %>
+        更新: <%= schedule.updated_at.strftime("%Y/%m/%d %R") %>
+      <% end %>
+    </span>
+    <span class="schedule-delete">
+      <%= link_to "予定を削除", schedule, method: :delete, data: { confirm: '予定を削除しますか？' } %>
+    </span>
+  </div>
+</div>
