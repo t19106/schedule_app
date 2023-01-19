@@ -9,6 +9,9 @@ FactoryBot.define do
     start_date { DateTime.yesterday }
     end_date { DateTime.now }
   end
+  factory :s_no_date, class: Schedule do
+    title { "これはタイトルです。" }
+  end
   factory :s_early_start_date, class: Schedule do
     title { "これはタイトルです。" }
     start_date { DateTime.now }

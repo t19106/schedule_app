@@ -2,6 +2,7 @@ require 'rails_helper'
 
 s_success = FactoryBot.build(:s)
 s_no_title = FactoryBot.build(:s_no_title)
+s_no_date = FactoryBot.build(:s_no_date)
 s_early_start_date = FactoryBot.build(:s_early_start_date)
 s_19_titles = FactoryBot.build(:s_19_titles)
 s_20_titles = FactoryBot.build(:s_20_titles)
@@ -19,6 +20,11 @@ RSpec.describe Schedule, type: :model do
     context "タイトルがない" do
       it "is able to save" do
         expect(s_no_title).not_to be_valid
+      end
+    end
+    context "日付がない" do
+      it "is able to save" do
+        expect(s_no_date).not_to be_valid
       end
     end
   end

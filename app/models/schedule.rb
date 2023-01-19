@@ -6,6 +6,7 @@ class Schedule < ApplicationRecord
 
   private
   def start_date_is_later
+    return if start_date.nil? || end_date.nil?
     if start_date > end_date
       errors.add(:start_date, "が終了日よりも遅くに始まります。")
     end
