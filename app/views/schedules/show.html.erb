@@ -1,0 +1,7 @@
+<% content_for(:title, @schedule.title) %>
+<% flash.each do |message_type, message| %>
+  <div class="flash"><%= message %></div>
+<% end %>
+<%= render "schedule", schedule: @schedule %>
+<%= link_to "この予定を編集する", edit_schedule_path, class: "link-schedule" %>
+<%= link_to "予定一覧へ戻る", schedules_path, class: "link-schedule" %>

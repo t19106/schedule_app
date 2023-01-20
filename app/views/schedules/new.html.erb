@@ -1,0 +1,6 @@
+<% content_for(:title, "新しい予定") %>
+<div class="form-wrapper">
+    <h2>新しくスケジュールを作成します</h2>
+    <%= render "form", schedule: @schedule %>
+    <%= link_to "予定一覧へ戻る", schedules_path, class: "link-schedule" %>
+</div>

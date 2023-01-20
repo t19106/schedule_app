@@ -1,0 +1,19 @@
+<% content_for(:title, "予定一覧") %>
+<% flash.each do |message_type, message| %>
+  <div class="flash"><%= message %></div>
+<% end %>
+<div class="card-wrapper">
+  <% @schedules.each do |schedule| %>
+    <%= render "schedule", schedule: schedule, with_id: true, with_update_date: true, with_title_link: true %>
+  <% end %>
+</div>
+<div class="footer">
+  <div>
+    <%= "本日は#{DateTime.now.strftime("%Y/%m/%d")}です。" %>
+  </div>
+  <br>
+  <div>
+    合計スケジュール数：<%= @schedules.count %>
+  </div>
+  <%= link_to "新しいスケジュールを作成する", new_schedule_path, class: "link-schedule" %>
+</div>

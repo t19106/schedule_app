@@ -1,0 +1,7 @@
+<% content_for(:title, @schedule.title + "を編集する") %>
+<div class="form-wrapper">
+    <h2>スケジュールを編集します</h2>
+    <%= render "form", schedule: @schedule %>
+    <%= link_to "前のページへ戻る", schedule_path, class: "link-schedule" %>
+    <%= link_to "予定一覧へ戻る", schedules_path, class: "link-schedule" %>
+</div>
